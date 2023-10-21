@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(243, 87%, 12%);
+  --color-brand-2: hsl(0, 0%, 75%);
+  --color-brand-3: hsl(170, 45%, 43%);
+
+  --color-site-1: hsl(240, 75%, 98%);
+  --color-site-2: hsl(238, 22%, 44%);
+  --color-site-3: hsl(224, 93%, 58%);
+
+  --font-heading-cta-nav: "Raleway", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.HeaderWrapper-ImgBox {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.HeaderWrapper-ImgBox > img {
+  width: 100%;
+}
+
+.HeaderWrapper-TxtBox-Title {
+  font-size: 2.5rem;
+  font-family: var(--font-heading-cta-nav);
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.HeaderWrapper-TxtBox-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-1);
+  font-family: var(--font-body);
+  margin-bottom: 3rem;
+}
+
+label {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.HeaderWrapper-TxtBox-Form-Input {
+  display: block;
+  width: 100%;
+  border: 1.5px solid var(--color-site-2);
+  outline: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-family: var(--font-heading-cta-nav);
+}
+
+.error {
+  color: red;
+  font-size: 1.3rem;
+  font-family: var(--font-body);
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+}
+
+.HeaderWrapper-TxtBox-Form-Btn {
+  display: block;
+  width: 100%;
+  background-color: var(--color-site-3);
+  border: none;
+  color: var(--color-site-1);
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  font-family: var(--font-heading-cta-nav);
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.HeaderWrapper-TxtBox-Form-Btn:hover {
+  filter: brightness(150%);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 3rem 4rem;
+  }
+
+  .HeaderWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .HeaderWrapper-ImgBox {
+    grid-column: 2;
+  }
+
+  .HeaderWrapper-TxtBox {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .HeaderWrapper-TxtBox-Title {
+    font-size: 3.5rem;
+  }
+
+  .HeaderWrapper-TxtBox-Form {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

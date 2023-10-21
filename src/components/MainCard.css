@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(243, 87%, 12%);
+  --color-brand-2: hsl(0, 0%, 75%);
+  --color-brand-3: hsl(170, 45%, 43%);
+
+  --color-site-1: hsl(240, 75%, 98%);
+  --color-site-2: hsl(238, 22%, 44%);
+  --color-site-3: hsl(224, 93%, 58%);
+
+  --font-heading-cta-nav: "Raleway", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  margin-top: 3rem;
+}
+
+.FirstCard {
+  padding: 8rem 2rem 3rem;
+  background: url("../assets/bg-curve-mobile.svg"),
+    linear-gradient(transparent 6rem, var(--color-site-1) 6rem 100%);
+  background-size: 100% 6rem, 100% 100%;
+  background-position: top left, center;
+  background-repeat: no-repeat, no-repeat;
+  text-align: center;
+}
+
+.FirstCard-ImgBox {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.FirstCard-ImgBox > img {
+  width: 100%;
+}
+
+.FirstCard-TxtBox-Title {
+  font-size: 2rem;
+  font-family: var(--font-heading-cta-nav);
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.FirstCard-TxtBox-Para {
+  font-size: 1.6rem;
+  font-family: var(--font-body);
+  color: var(--color-site-2);
+  margin-bottom: 2rem;
+}
+
+.FirstCard-TxtBox-LinkBox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.FirstCard-TxtBox-LinkBox-Link {
+  font-size: 1.6rem;
+  color: var(--color-brand-3);
+  font-family: var(--font-heading-cta-nav);
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.FirstCard-TxtBox-LinkBox-Link::after {
+  content: "";
+  display: block;
+  width: calc(100% + 2rem);
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  background-color: var(--color-brand-3);
+}
+
+.FirstCard-TxtBox-LinkBox img {
+  width: 2rem;
+  display: block;
+}
+
+.FirstCard-TxtBox-ReviewBox {
+  padding: 2rem;
+  text-align: left;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 12px var(--color-brand-2);
+  margin-bottom: 5rem;
+}
+
+.FirstCard-TxtBox-ReviewBox > img {
+  width: 2rem;
+}
+
+.FirstCard-TxtBox-ReviewBox-Para {
+  font-size: 1.6rem;
+  font-family: var(--font-body);
+  color: var(--color-site-2);
+  margin-bottom: 2rem;
+}
+
+.FirstCard-TxtBox-ReviewBox-UserBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.FirstCard-TxtBox-ReviewBox-UserBox > img {
+  display: block;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.FirstCard-TxtBox-ReviewBox-UserBox-Name {
+  font-size: 2rem;
+  color: var(--color-brand-1);
+  font-family: var(--font-body);
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.FirstCard-TxtBox-ReviewBox-UserBox-Job {
+  font-size: 1.6rem;
+  color: var(--color-site-2);
+  font-family: var(--font-body);
+}
+
+.SecondCard {
+  background-color: var(--color-site-2);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.SecondCard-Title {
+  font-size: 3rem;
+  color: var(--color-site-1);
+  font-family: var(--font-heading-cta-nav);
+  margin-bottom: 2rem;
+}
+
+.SecondCard-Para {
+  font-size: 1.6rem;
+  color: var(--color-site-1);
+  font-family: var(--font-body);
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.SecondCard-Form-Input {
+  display: block;
+  width: 100%;
+  border: 1.5px solid var(--color-brand-2);
+  padding: 1rem 2rem;
+  font-family: var(--font-heading-cta-nav);
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.errorPara {
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+  font-size: 1.3rem;
+  color: var(--color-site-1);
+  font-family: var(--font-body);
+}
+
+.SecondCard-Form-Btn {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-family: var(--font-heading-cta-nav);
+  color: var(--color-site-1);
+  background-color: var(--color-site-3);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.SecondCard-Form-Btn:hover {
+  filter: brightness(150%);
+}
+
+@media screen and (min-width: 768px) {
+  .FirstCard {
+    padding: 8rem 4rem 3rem;
+    background: url("../assets/bg-curve-desktop.svg"),
+      linear-gradient(transparent 6rem, var(--color-site-1) 6rem 100%);
+    background-size: 100% 6rem, 100% 100%;
+    background-position: top left, center;
+    background-repeat: no-repeat, no-repeat;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: dense;
+    gap: 3rem;
+  }
+
+  .FirstCard-ImgBox {
+    grid-column: 2;
+  }
+
+  .FirstCard-TxtBox {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .FirstCard-TxtBox-Title {
+    font-size: 3rem;
+  }
+
+  .FirstCard-TxtBox-LinkBox {
+    justify-content: flex-start;
+  }
+
+  .SecondCard {
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    text-align: left;
+  }
+
+  .SecondCard-Title {
+    font-size: 4rem;
+  }
+
+  .SecondCard-Form-Btn {
+    max-width: 20rem;
+  }
+}

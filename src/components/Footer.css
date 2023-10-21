@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(243, 87%, 12%);
+  --color-brand-2: hsl(0, 0%, 75%);
+  --color-brand-3: hsl(170, 45%, 43%);
+
+  --color-site-1: hsl(240, 75%, 98%);
+  --color-site-2: hsl(238, 22%, 44%);
+  --color-site-3: hsl(224, 93%, 58%);
+
+  --font-heading-cta-nav: "Raleway", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  padding: 5rem 2rem 3rem;
+  background-color: var(--color-brand-1);
+}
+
+.FooterLogo {
+  display: block;
+  width: 10rem;
+  margin-bottom: 2rem;
+}
+
+.FooterLogo > img {
+  width: 100%;
+  filter: invert(100%) sepia(95%) saturate(2%) hue-rotate(271deg)
+    brightness(351%) contrast(101%);
+}
+
+address > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+address > div > img {
+  width: 2rem;
+}
+
+address > div > p {
+  color: var(--color-site-1);
+  font-size: 1.6rem;
+  font-family: var(--font-body);
+  font-style: normal;
+}
+
+ul {
+  margin-bottom: 3rem;
+}
+
+.FooterWrapper-FooterLink {
+  margin-bottom: 1rem;
+}
+
+.FooterWrapper-FooterLink > a {
+  color: var(--color-site-1);
+  font-size: 1.6rem;
+  font-family: var(--font-heading-cta-nav);
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.FooterWrapper-FooterLink > a:hover {
+  color: var(--color-site-3);
+}
+
+.FooterWrapper-SocialIconsBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.FooterWrapper-SocialIconsBox-FooterLink > a {
+  display: grid;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-site-1);
+  place-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.FooterWrapper-SocialIconsBox-FooterLink > a:hover {
+  border-color: var(--color-site-3);
+}
+
+.socialIcon {
+  color: var(--color-site-1);
+  font-size: 2.5rem;
+}
+
+.FooterWrapper-SocialIconsBox-FooterLink > a:hover .socialIcon {
+  color: var(--color-site-3);
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 5rem 4rem 3rem;
+  }
+
+  .FooterWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+}
